@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+:root {
+  --primary-subdued: hsl(254, 88%, 90%);
+  --primart-base: hsl(256, 67%, 59%);
+  --accent-subdued: hsl(31, 66%, 93%);
+  --accent-base: hsl(39, 100%, 71%);
+  --white: hsl(0, 0%, 100%);
+  --off-white: hsl(0, 0%, 96%);
+  --black: hsl(0, 0%, 7%);
+
+  --fs-reg: 1.125rem;
+  --fs-md: 2.25rem;
+  --fs-lg: 3rem;
+  --fs-xl: 4rem;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+}
+
+body {
+  background: var(--off-white);
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  display: grid;
+  grid-template-areas: 
+    "one"
+    "two"
+    "three"
+    "four"
+    "five"
+    "six"
+    "seven"
+    "eight";
+  gap: 1.5rem;
+  margin: 1rem;
+  @media (min-width: 50em) {
+    grid-template-areas: 
+      "seven one one four"
+      "seven two three four"
+      "eight two six "
+      "eight six five five";
+  }
+}
+
+.component {
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.one {
+  background-color: var(--purple-2);
+  color: var(--white);
+  grid-area: one;
+}
+
+.one span {
+  color: var(--yellow-2);
+}
+
+.two {
+  background-color: var(--white);
+  color: var(--black);
+  grid-area: two;
+}
+
+.three {
+  background-color: var(--yellow-2);
+  color: var(--black);
+  grid-area: three;
+}
+
+.four {
+  background-color: var(--purple-1);
+  grid-area: four;
+}
+
+.five {
+  background-color: var(--purple-2);
+  color: var(--white);
+  grid-area: five;
+}
+
+.six {
+  background-color: var(--white);
+  color: var(--black);
+  grid-area: six;
+}
+
+.seven {
+  background-color: var(--yellow-1);
+  grid-area: seven;
+}
+
+.seven span {
+  color: var(--purple-2);
+  font-style: italic;
+}
+
+.eight {
+  background-color: var(--yellow-2);
+  grid-area: eight;
+}
